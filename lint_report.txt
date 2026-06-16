@@ -1,0 +1,277 @@
+
+> cyberscope-rp-@0.0.0 lint
+> eslint .
+
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/App.jsx
+  1:8  error  'React' is defined but never used  no-unused-vars
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/components/GraphCrashProtector.jsx
+  10:35  error  'error' is defined but never used           no-unused-vars
+  69:60  error  'title' is assigned a value but never used  no-unused-vars
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/components/Sidebar.jsx
+   1:8  error  'React' is defined but never used       no-unused-vars
+  11:3  error  'Terminal' is defined but never used    no-unused-vars
+  12:3  error  'ToggleLeft' is defined but never used  no-unused-vars
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/components/Topbar.jsx
+   1:8  error  'React' is defined but never used                     no-unused-vars
+   6:3  error  'ShieldAlert' is defined but never used               no-unused-vars
+   8:3  error  'Cpu' is defined but never used                       no-unused-vars
+  11:3  error  'AlertTriangle' is defined but never used             no-unused-vars
+  20:5  error  'hasPermission' is assigned a value but never used    no-unused-vars
+  26:5  error  'isSimulating' is assigned a value but never used     no-unused-vars
+  27:5  error  'setIsSimulating' is assigned a value but never used  no-unused-vars
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/components/VirtualTable.jsx
+  1:8  error  'React' is defined but never used  no-unused-vars
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/components/pages/AccessControlPage.jsx
+    1:8   error    'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             no-unused-vars
+    8:3   error    'ShieldAlert' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       no-unused-vars
+   42:16  error    Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  40 |   // Toast Helper
+  41 |   const showToast = (message, type = 'success') => {
+> 42 |     const id = Date.now();
+     |                ^^^^^^^^^^ Cannot call impure function
+  43 |     setNotifications(prev => [...prev, { id, message, type }]);
+  44 |     setTimeout(() => {
+  45 |       setNotifications(prev => prev.filter(n => n.id !== id));                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 react-hooks/purity
+  106:6   warning  React Hook useMemo has a missing dependency: 'permissionKeys'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               react-hooks/exhaustive-deps
+  109:27  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. This value was memoized in source but not in compilation output.
+
+  107 |
+  108 |   // Compute permission delta between old role and new target role
+> 109 |   const permissionDelta = useMemo(() => {
+      |                           ^^^^^^^^^^^^^^^
+> 110 |     if (!wizardUser || !wizardNewRole) return { gains: [], losses: [] };
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 111 |     const oldRole = wizardUser.role;
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 130 |     return { gains, losses };
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 131 |   }, [wizardUser, wizardNewRole, roles, permissionLabels]);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Could not preserve existing memoization
+  132 |
+  133 |   const handleTogglePermission = (roleName, permission, currentValue) => {
+  134 |     const res = updateRolePermission(roleName, permission, !currentValue);  react-hooks/preserve-manual-memoization
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/components/pages/BlacklistExplorerPage.jsx
+   1:8   error  'React' is defined but never used                       no-unused-vars
+   7:3   error  'Filter' is defined but never used                      no-unused-vars
+   9:3   error  'ShieldX' is defined but never used                     no-unused-vars
+  13:3   error  'ExternalLink' is defined but never used                no-unused-vars
+  18:38  error  'hasPermission' is assigned a value but never used      no-unused-vars
+  87:28  error  'index' is defined but never used                       no-unused-vars
+  89:11  error  'isActuallyBlocked' is assigned a value but never used  no-unused-vars
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/components/pages/DashboardPage.jsx
+  11:3   error  'TrendingUp' is defined but never used     no-unused-vars
+  12:18  error  'AlertIcon' is defined but never used      no-unused-vars
+  13:3   error  'Cpu' is defined but never used            no-unused-vars
+  15:3   error  'AlertTriangle' is defined but never used  no-unused-vars
+  28:3   error  'Legend' is defined but never used         no-unused-vars
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/components/pages/NetworkFeedPage.jsx
+   1:8   error  'React' is defined but never used                   no-unused-vars
+   1:27  error  'useEffect' is defined but never used               no-unused-vars
+   1:38  error  'useRef' is defined but never used                  no-unused-vars
+   7:3   error  'Trash2' is defined but never used                  no-unused-vars
+   8:3   error  'ShieldAlert' is defined but never used             no-unused-vars
+  14:3   error  'Globe' is defined but never used                   no-unused-vars
+  24:5   error  'clearAlerts' is assigned a value but never used    no-unused-vars
+  30:5   error  'hasPermission' is assigned a value but never used  no-unused-vars
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/components/pages/SecuritySearchPage.jsx
+    1:8   error  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    no-unused-vars
+    6:3   error  'Terminal' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 no-unused-vars
+    9:3   error  'HelpCircle' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no-unused-vars
+   15:3   error  'RotateCcw' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                no-unused-vars
+  175:7   error  Error: This value cannot be modified
+
+Modifying a value previously passed as an argument to a hook is not allowed. Consider moving the modification before calling the hook.
+
+  173 |       // Target field matching
+  174 |       const targetText = pkt[searchField] || '';
+> 175 |       regex.lastIndex = 0;
+      |       ^^^^^ `regex_0` cannot be modified
+  176 |       return regex.test(targetText);
+  177 |     });
+  178 |   }, [currentDataset, regexObject, searchField, filterProto]);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                react-hooks/immutability
+  228:14  error  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+  308:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  306 |   useEffect(() => {
+  307 |     if (realTime) {
+> 308 |       setTriggerQuery(regexQuery);
+      |       ^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  309 |       setTriggerMatchCase(matchCase);
+  310 |     }
+  311 |   }, [realTime, regexQuery, matchCase]);  react-hooks/set-state-in-effect
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/components/pages/SettingsPage.jsx
+   1:8  error  'React' is defined but never used                    no-unused-vars
+   6:3  error  'ShieldAlert' is defined but never used              no-unused-vars
+  20:5  error  'blockedIPs' is assigned a value but never used      no-unused-vars
+  21:5  error  'setCurrentUser' is assigned a value but never used  no-unused-vars
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/components/pages/ThreatAnalysisPage.jsx
+   1:8   error    'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+   7:3   error    'Zap' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+   9:3   error    'ShieldAlert' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                no-unused-vars
+  10:3   error    'BarChart2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  11:15  error    'PieIcon' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    no-unused-vars
+  12:3   error    'Globe' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+  29:3   error    'Legend' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+  33:11  error    'threatScore' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       no-unused-vars
+  39:10  error    'crashedGraph' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+  39:24  error    'setCrashedGraph' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   no-unused-vars
+  55:58  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  53 |   // Geo threat data compiled for PieChart
+  54 |   const geoData = useMemo(() => [
+> 55 |     { name: 'Russian Federation (RU)', value: Math.floor(Math.random() * 40) + 35, color: '#ff3b30' },
+     |                                                          ^^^^^^^^^^^^^ Cannot call impure function
+  56 |     { name: 'China (CN)', value: Math.floor(Math.random() * 30) + 25, color: '#ffcc00' },
+  57 |     { name: 'United States (US)', value: Math.floor(Math.random() * 25) + 15, color: '#00f0ff' },
+  58 |     { name: 'Ukraine (UA)', value: Math.floor(Math.random() * 15) + 10, color: '#00ff7f' },                                      react-hooks/purity
+  56:45  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  54 |   const geoData = useMemo(() => [
+  55 |     { name: 'Russian Federation (RU)', value: Math.floor(Math.random() * 40) + 35, color: '#ff3b30' },
+> 56 |     { name: 'China (CN)', value: Math.floor(Math.random() * 30) + 25, color: '#ffcc00' },
+     |                                             ^^^^^^^^^^^^^ Cannot call impure function
+  57 |     { name: 'United States (US)', value: Math.floor(Math.random() * 25) + 15, color: '#00f0ff' },
+  58 |     { name: 'Ukraine (UA)', value: Math.floor(Math.random() * 15) + 10, color: '#00ff7f' },
+  59 |     { name: 'Other Subnets', value: Math.floor(Math.random() * 20) + 10, color: '#8b9bb4' }  react-hooks/purity
+  57:53  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  55 |     { name: 'Russian Federation (RU)', value: Math.floor(Math.random() * 40) + 35, color: '#ff3b30' },
+  56 |     { name: 'China (CN)', value: Math.floor(Math.random() * 30) + 25, color: '#ffcc00' },
+> 57 |     { name: 'United States (US)', value: Math.floor(Math.random() * 25) + 15, color: '#00f0ff' },
+     |                                                     ^^^^^^^^^^^^^ Cannot call impure function
+  58 |     { name: 'Ukraine (UA)', value: Math.floor(Math.random() * 15) + 10, color: '#00ff7f' },
+  59 |     { name: 'Other Subnets', value: Math.floor(Math.random() * 20) + 10, color: '#8b9bb4' }
+  60 |   ], [trendData]);         react-hooks/purity
+  58:47  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  56 |     { name: 'China (CN)', value: Math.floor(Math.random() * 30) + 25, color: '#ffcc00' },
+  57 |     { name: 'United States (US)', value: Math.floor(Math.random() * 25) + 15, color: '#00f0ff' },
+> 58 |     { name: 'Ukraine (UA)', value: Math.floor(Math.random() * 15) + 10, color: '#00ff7f' },
+     |                                               ^^^^^^^^^^^^^ Cannot call impure function
+  59 |     { name: 'Other Subnets', value: Math.floor(Math.random() * 20) + 10, color: '#8b9bb4' }
+  60 |   ], [trendData]);
+  61 |                                                                                                                      react-hooks/purity
+  59:48  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  57 |     { name: 'United States (US)', value: Math.floor(Math.random() * 25) + 15, color: '#00f0ff' },
+  58 |     { name: 'Ukraine (UA)', value: Math.floor(Math.random() * 15) + 10, color: '#00ff7f' },
+> 59 |     { name: 'Other Subnets', value: Math.floor(Math.random() * 20) + 10, color: '#8b9bb4' }
+     |                                                ^^^^^^^^^^^^^ Cannot call impure function
+  60 |   ], [trendData]);
+  61 |
+  62 |   // Protocol / Attack type distribution data                                                                                                                                                                 react-hooks/purity
+  60:6   warning  React Hook useMemo has an unnecessary dependency: 'trendData'. Either exclude it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/exhaustive-deps
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/context/NetworkContext.jsx
+    1:8   error    'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    no-unused-vars
+    2:50  error    'blacklistEngine' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          no-unused-vars
+    8:23  error    'toggleIPBlock' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   no-unused-vars
+    8:66  error    'threatScore' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+   51:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  49 |       }
+  50 |     });
+> 51 |     setAlerts(initialAlerts);
+     |     ^^^^^^^^^ Avoid calling setState() directly within an effect
+  52 |
+  53 |     // Initial metrics calculate
+  54 |     let critical = 0, high = 0, medium = 0, low = 0, clean = 0;  react-hooks/set-state-in-effect
+   72:6   warning  React Hook useEffect has a missing dependency: 'packets'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           react-hooks/exhaustive-deps
+  141:6   warning  React Hook useEffect has a missing dependency: 'processNewPacket'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  react-hooks/exhaustive-deps
+  287:14  error    Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       react-refresh/only-export-components
+
+/Users/pawansushilmiahra/Documents/CyberScope(RP)/src/context/SecurityContext.jsx
+    1:8   error  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            no-unused-vars
+    1:65  error  'useRef' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           no-unused-vars
+   50:34  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  48 |   const [users, setUsers] = useState(INITIAL_USERS);
+  49 |   const [activityLog, setActivityLog] = useState([
+> 50 |     { id: 1, timestamp: new Date(Date.now() - 3600000 * 3).toISOString(), user: 'System', action: 'SOC System Initialization Completed', severity: 'low' },
+     |                                  ^^^^^^^^^^ Cannot call impure function
+  51 |     { id: 2, timestamp: new Date(Date.now() - 3600000 * 2).toISOString(), user: 'Elena Rostova', action: 'System Threat Level Checked: Normal', severity: 'low' },
+  52 |     { id: 3, timestamp: new Date(Date.now() - 3600000).toISOString(), user: 'Marcus Sterling', action: 'Updated Global IP Blacklist feed source', severity: 'medium' }
+  53 |   ]);  react-hooks/purity
+   51:34  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  49 |   const [activityLog, setActivityLog] = useState([
+  50 |     { id: 1, timestamp: new Date(Date.now() - 3600000 * 3).toISOString(), user: 'System', action: 'SOC System Initialization Completed', severity: 'low' },
+> 51 |     { id: 2, timestamp: new Date(Date.now() - 3600000 * 2).toISOString(), user: 'Elena Rostova', action: 'System Threat Level Checked: Normal', severity: 'low' },
+     |                                  ^^^^^^^^^^ Cannot call impure function
+  52 |     { id: 3, timestamp: new Date(Date.now() - 3600000).toISOString(), user: 'Marcus Sterling', action: 'Updated Global IP Blacklist feed source', severity: 'medium' }
+  53 |   ]);
+  54 |                                                       react-hooks/purity
+   52:34  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  50 |     { id: 1, timestamp: new Date(Date.now() - 3600000 * 3).toISOString(), user: 'System', action: 'SOC System Initialization Completed', severity: 'low' },
+  51 |     { id: 2, timestamp: new Date(Date.now() - 3600000 * 2).toISOString(), user: 'Elena Rostova', action: 'System Threat Level Checked: Normal', severity: 'low' },
+> 52 |     { id: 3, timestamp: new Date(Date.now() - 3600000).toISOString(), user: 'Marcus Sterling', action: 'Updated Global IP Blacklist feed source', severity: 'medium' }
+     |                                  ^^^^^^^^^^ Cannot call impure function
+  53 |   ]);
+  54 |   
+  55 |   // IP Blacklist state                                                                               react-hooks/purity
+  238:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  236 |     // Add small random noise
+  237 |     const noise = Math.floor(Math.sin(Date.now() / 10000) * 5);
+> 238 |     setThreatScore(Math.max(10, Math.min(100, base + noise + 10)));
+      |     ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  239 |   }, [blockedIPs]);
+  240 |
+  241 |   return (                            react-hooks/set-state-in-effect
+  266:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               react-refresh/only-export-components
+
+✖ 81 problems (77 errors, 4 warnings)
+
