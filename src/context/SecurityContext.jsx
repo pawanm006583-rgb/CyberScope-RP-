@@ -36,10 +36,10 @@ const INITIAL_ROLES = {
 
 // Initial system users
 const INITIAL_USERS = [
-  { id: 'u1', name: 'Elena Rostova', role: 'Admin', email: 'e.rostova@cyberscope.io', status: 'Active', avatar: 'ER', lastUpdated: new Date(Date.now() - 3600000 * 24).toISOString() },
-  { id: 'u2', name: 'Marcus Sterling', role: 'Security Analyst', email: 'm.sterling@cyberscope.io', status: 'Active', avatar: 'MS', lastUpdated: new Date(Date.now() - 3600000 * 12).toISOString() },
-  { id: 'u3', name: 'Sarah Vance', role: 'Viewer', email: 's.vance@cyberscope.io', status: 'Active', avatar: 'SV', lastUpdated: new Date(Date.now() - 3600000 * 48).toISOString() },
-  { id: 'u4', name: 'Tariq Al-Jamil', role: 'Security Analyst', email: 't.jamil@cyberscope.io', status: 'Suspended', avatar: 'TJ', lastUpdated: new Date(Date.now() - 3600000 * 6).toISOString() }
+  { id: 'u1', name: 'Pawan Mishra', role: 'Admin', email: 'e.rostova@cyberscope.io', status: 'Active', avatar: 'PM', lastUpdated: new Date(Date.now() - 3600000 * 24).toISOString() },
+  { id: 'u2', name: 'Marcus Patil', role: 'Security Analyst', email: 'm.sterling@cyberscope.io', status: 'Active', avatar: 'MP', lastUpdated: new Date(Date.now() - 3600000 * 12).toISOString() },
+  { id: 'u3', name: 'Sarah Singh', role: 'Viewer', email: 's.vance@cyberscope.io', status: 'Active', avatar: 'SS', lastUpdated: new Date(Date.now() - 3600000 * 48).toISOString() },
+  { id: 'u4', name: 'Tariq Kumar', role: 'Security Analyst', email: 't.jamil@cyberscope.io', status: 'Suspended', avatar: 'TK', lastUpdated: new Date(Date.now() - 3600000 * 6).toISOString() }
 ];
 
 // Initial system logs (moved outside to prevent rendering impurity)
