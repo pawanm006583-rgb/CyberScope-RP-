@@ -84,7 +84,7 @@ CyberScope is a modern cybersecurity dashboard built with React that simulates r
 <tr>
 <td>
 
-### 🔐 Access Control
+###  Access Control
 
 * RBAC management
 * User permissions
@@ -108,7 +108,7 @@ CyberScope is a modern cybersecurity dashboard built with React that simulates r
 
 ---
 
-# 🖥️ Dashboard Modules
+#  Dashboard Modules
 
 ```text
 ┌─────────────────────────────────────────────┐
@@ -126,20 +126,20 @@ CyberScope is a modern cybersecurity dashboard built with React that simulates r
 
 ---
 
-# 📸 Screenshots
+#  Screenshots
 
-## 🖥️ Dashboard Overview
+##  Dashboard Overview
 
 <p align="center">
   <img src="./screenshots/dashboard.png" alt="CyberScope Dashboard" width="100%">
 </p>
 
 ### Highlights
-- 🎯 Instant Threat Score Monitoring
-- 🚨 Active Security Alerts Tracking
-- 🌐 Blacklisted IP Intelligence
-- 📡 Live Gateway Packet Feed
-- 📈 Threat Vector Timeline Analytics
+-  Instant Threat Score Monitoring
+-  Active Security Alerts Tracking
+-  Blacklisted IP Intelligence
+-  Live Gateway Packet Feed
+-  Threat Vector Timeline Analytics
 
 ---
 
@@ -150,28 +150,28 @@ CyberScope is a modern cybersecurity dashboard built with React that simulates r
 </p>
 
 ### Highlights
-- 🔄 Real-Time Packet Monitoring
-- 🌍 Source & Destination IP Tracking
-- 📶 Protocol Inspection
-- 🚨 Suspicious Traffic Detection
-- 🛡️ Firewall Payload Inspector
-- 🔍 Advanced Filtering & Search
+-  Real-Time Packet Monitoring
+-  Source & Destination IP Tracking
+-  Protocol Inspection
+-  Suspicious Traffic Detection
+-  Firewall Payload Inspector
+-  Advanced Filtering & Search
 
 ---
 
-## 📊 Threat Analysis Center
+##  Threat Analysis Center
 
 <p align="center">
   <img src="./screenshots/threat-analysis.png" alt="CyberScope Threat Analysis" width="100%">
 </p>
 
 ### Highlights
-- 📈 Active Intrusion Detection Analytics
-- 🎯 Exploit Signature Distribution
-- 🌐 Threat Origin Intelligence
-- ⚡ Threat Containment Metrics
-- 📊 Historical Security Trends
-- 🛡️ Incident Response Statistics
+-  Active Intrusion Detection Analytics
+-  Exploit Signature Distribution
+-  Threat Origin Intelligence
+-  Threat Containment Metrics
+-  Historical Security Trends
+-  Incident Response Statistics
 
 ---
 
@@ -182,16 +182,16 @@ CyberScope is a modern cybersecurity dashboard built with React that simulates r
 </p>
 
 ### Highlights
-- 👥 Role-Based Access Control (RBAC)
-- 🔑 User & Permission Management
-- 🧙 Rule Change Wizard
-- 📝 Permission Modification History
-- 🔄 Undo Last Action Functionality
-- 🛡️ Security Role Administration
+-  Role-Based Access Control (RBAC)
+-  User & Permission Management
+-  Rule Change Wizard
+-  Permission Modification History
+-  Undo Last Action Functionality
+-  Security Role Administration
 
 ---
 
-# 🏗️ System Architecture
+#  System Architecture
 
 ```mermaid
 flowchart LR
@@ -223,7 +223,7 @@ F
 
 ---
 
-# 🎥 Application Workflow
+#  Application Workflow
 
 ```text
 Network Packet Generated
@@ -270,7 +270,7 @@ CyberScope
 
 ---
 
-# 🎯 Problem Statement Coverage
+#  Problem Statement Coverage
 
 | Requirement                | Status |
 | -------------------------- | ------ |
@@ -321,6 +321,20 @@ F
 * Export Security Reports
 
 ---
+
+<div align="center">
+
+## 🌐 Try CyberScope Live
+
+<a href="https://cyber-scope-rp.vercel.app/">
+  <img src="https://img.shields.io/badge/_Launch_Live_Demo-00E676?style=for-the-badge&logo=vercel&logoColor=white">
+</a>
+
+<a href="https://github.com/pawanm006583-rgb/CyberScope">
+  <img src="https://img.shields.io/badge/📂_View_Source_Code-181717?style=for-the-badge&logo=github">
+</a>
+
+</div>
 
 # ⚠️ Disclaimer
 
